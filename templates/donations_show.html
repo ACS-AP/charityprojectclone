@@ -1,0 +1,26 @@
+<h1 class="mb-5">Donation</h1>
+
+<div class="row">
+  {% for donation in donations %}
+  <div class="row">
+    <div class="col-2 mb-5 text-center">
+      <small>{{ donation.date }}</small>
+    </div>
+    <div class="col-4 mb-5 text-center">
+      <h2>{{ donation.name }}</h2>
+    </div>
+    <div class="col-2 mb-5 text-center">
+      <small>{{ donation.amount }}</small>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="row">
+  {% for donation in donations %}
+  <div class="col-4 mb-5 text-center">
+    <h2>{{ donation.name }}</h2>
+    <small>{{ donation.date }}</small>
+  </div>
+  {% endfor %} {% endblock %}
+</div>

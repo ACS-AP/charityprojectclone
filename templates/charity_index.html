@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+<h3 class="mb-5 text-center">{{ user_obj.username }}'s Dashboard!</h3>
+
+{% for donation in donations %}
+<div class="container-fluid w-100 d-flex align-items-center flex-column">
+  <div class="row w-75">
+    <div class="col-5 offset-sm-1 mb-0 p-0">
+      <h2>{{ donation.name }}</h2>
+    </div>
+    <div class="col-3 mb-2 text-center">
+      <small style="font-size: 0.8em">{{ donation.date }}</small>
+    </div>
+    <div class="col-2 mb-2">
+      <p>${{ '%.2f' | format(donation.amount|float) }}</p>
+    </div>
+    <div class="col-1 text-center">
+      <form method="POST" action="/donations/{{ donation._id }}/remove">
+        <button class="btn btn-danger p-1" style="font-size: 0.9em" type="submit">Remove</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endfor %} {% endblock %}

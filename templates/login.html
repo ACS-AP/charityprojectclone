@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Charity Tracker</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand navbar-light bg-light">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="login">Login</a>
+      <a class="nav-item nav-link" href="donate">Donation Tracker</a>
+      <a class="nav-item nav-link" href="charities">Top Charities</a>
+      <a class="nav-item nav-link" href="contact">Contact</a>
+  
+    </div>
+  </nav>
+
+<section class="hero is-info is-fullheight">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <form method="POST" action="/">
+                        <div class="field">
+                            <label class="label">Username</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input class="input" type="text" name="username" placeholder="Username">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Password</label>
+                            <p class="control has-icons-left">
+                            <input class="input" type="password" name="password" placeholder="Password">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control">
+                            <button type="submit" class="btn btn-primary">
+                                Login
+                            </button>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
